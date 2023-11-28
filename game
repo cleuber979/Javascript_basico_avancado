@@ -1,0 +1,24 @@
+let nome = "Hero";
+let life = 100;
+let force = 10;
+let devense = 5;
+
+//skill
+
+let jump = false;
+let fire = false;
+let swim= true;
+
+//data of moster
+let moster_name = "groud";
+let moster_life = 50;
+let moster_force = 50;
+let moster_defense=1;
+
+// skill of moster
+
+let acido = true;
+
+//operadores math
+
+console.log(life = life- moster_life);
