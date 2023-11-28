@@ -21,4 +21,6 @@ let acido = true;
 
 //operadores math
 
-console.log(life = life- moster_life);
+console.log("O mostro gigante atacou o heroi. " + "  O heroi sofreu  "+(life-moster_force )+" de dano");
+
+
