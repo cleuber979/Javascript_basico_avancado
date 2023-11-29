@@ -14,4 +14,4 @@ let orc = {
 
 console.log(hero.name,orc.name);
 
-console.log(hero);
+
