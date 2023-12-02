@@ -23,6 +23,6 @@ function Atack() {
 
 Main();
 
-console.log(hero.name,orc.name);
+
 
 
