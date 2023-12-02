@@ -12,14 +12,16 @@ let orc = {
   defense:6
 };
 
-let combate = true;
-
-if (combate == true){
+function Main () {
   console.log("A batalha começa: ")
+  Atack()
 }
-if (hero.life < 10) {
-  console.log("Nosso heroi está ferido ")
+
+function Atack() {
+  console.log("O heroi atacou o mostro: ")
 }
+
+Main();
 
 console.log(hero.name,orc.name);
 
