@@ -1,38 +1,32 @@
-let hero = {
-  name:"Barbaro",
-  life:100,
-  power:10,
-  defense:5
-};
+const car = ['vw','fiat','gm','ford','mercedes'];
+console.log(car)
+ console.log(car.length) // tamanho do array
 
-let orc = {
-  name:"Onyx",
-  life:120,
-  power:20,
-  defense:6
-};
+ car.push('Alfa Romeo');// adiciona no fim do array 
 
-function Main () {
-  console.log("A batalha começa!: ");
-  console.log("Um orc gigante apareceu!");
-  console.log("Qual a sua escolha?");
-  console.log("1 - Atacacar:");
-  console.log("2 - defender:");
-  console.log("3- Fugir!");
+ car.unshift('cherry'); // adiciona no inicio do array 
 
-let escolha = 1;
+ const removido = car.pop();// retira no final do meu array o ultimo elemento
 
-if (escolha ==1 ) {
-  Atacar()
-}
+ const removido2 = car.shift();// romove o primeiro elemento do array  
 
-}
+ console.log("o primeiro item removido foi "+ removido2);
 
-function Atacar() {
-  console.log("O heroi ataca!");
-  console.log("O Orc predeu " + (hero.power-orc.defense));
-}
- Main()
+ console.log("o ultimo  item removido foi "+ removido);
+
+ delete car [2];// deleto ou apago o item por indice 
+
+ console.log(car.slice(0, 3));// estou fatiando meu array
+
+ console.log(typeof car);// me retorna não um array mais sim um objeto pois array js e um objeto
+
+ console.log(car instanceof Array);// estou perguntando se a instacia car e um array se true ok
+ 
+ console.log(car)
+
+ console.log(car[2]);
+
+
 
 
 
