@@ -24,13 +24,20 @@ let container = canvas.getContext("2d");
      ty:30
  }
 
-
+container.font="20px Arial"
  let pts1 = 0;
  let pts2 = 0;
- let Score = container.fillText("Score 1: " + pts1, 200,50);
- let Score = container.fillText("Score 2: " + pts, 950,50);
+ 
  
  function Draw(){
+  container.fillRect(jogador1.px,jogador1.py,jogador1.tx,jogador1.ty)
+  container.fillRect(jogador2.px,jogador1.py,jogador1.tx,jogador1.ty)
+  container.fillRect(ball.px,ball.py,ball.tx,ball.ty)
+  container.fillText("Score 1: " + pts1, 200,50)
+  container.fillText("Score 2: " + pts2, 950,50)
+ }
+ 
+ function Draw()
      
- };
+ 
 
