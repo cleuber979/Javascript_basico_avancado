@@ -28,16 +28,28 @@ container.font="20px Arial"
  let pts1 = 0;
  let pts2 = 0;
  
+ function Move_Ball(){
+    ball.px +=2;
+ }
  
  function Draw(){
   container.fillRect(jogador1.px,jogador1.py,jogador1.tx,jogador1.ty)
   container.fillRect(jogador2.px,jogador1.py,jogador1.tx,jogador1.ty)
   container.fillRect(ball.px,ball.py,ball.tx,ball.ty)
   container.fillText("Score 1: " + pts1, 200,50)
-  container.fillText("Score 2: " + pts2, 950,50)
+  container.fillText("Score 2: " + pts2, 750,50)
  }
  
- function Draw()
+function Main(){
+    container.clearRect(0,0,1020,420)
+    Draw()
+    console.log("estou vendo");
+    Move_Ball()
+}
+
+
+
+ setInterval(Main,20)
      
  
 
