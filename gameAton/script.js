@@ -21,7 +21,8 @@ let container = canvas.getContext("2d");
      px:960/2-15,
      py:420/2-15,
      tx:30,
-     ty:30
+     ty:30,
+	    dir:10
  }
 
 container.font="20px Arial"
@@ -29,8 +30,16 @@ container.font="20px Arial"
  let pts2 = 0;
  
  function Move_Ball(){
-    ball.px +=2;
+    ball.px += ball.dir
+	
+	 if (ball.px > 890){
+	 ball.dir*=-1
+ }else if(ball.px <110){
+	 ball.dir *= -1
  }
+ }
+ 
+
  
  function Draw(){
   container.fillRect(jogador1.px,jogador1.py,jogador1.tx,jogador1.ty)
@@ -50,6 +59,7 @@ function Main(){
 
 
  setInterval(Main,20)
+     
      
  
 
