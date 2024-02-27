@@ -22,12 +22,24 @@ let container = canvas.getContext("2d");
      py:420/2-15,
      tx:30,
      ty:30,
-	    dir:10
+	 dir:10
  }
 
 container.font="20px Arial"
  let pts1 = 0;
  let pts2 = 0;
+ 
+
+ 
+ 
+ document.addEventListener("keydown",function(e){
+	 if (e.keyCode === 40){
+		 jogador1.py -=9
+	 }else if (e.keyCode===38){
+		 jogador1.py += 9
+	 }
+ })
+ 
  
  function Move_Ball(){
     ball.px += ball.dir
@@ -43,7 +55,7 @@ container.font="20px Arial"
  
  function Draw(){
   container.fillRect(jogador1.px,jogador1.py,jogador1.tx,jogador1.ty)
-  container.fillRect(jogador2.px,jogador1.py,jogador1.tx,jogador1.ty)
+  container.fillRect(jogador2.px,jogador2.py,jogador2.tx,jogador1.ty)
   container.fillRect(ball.px,ball.py,ball.tx,ball.ty)
   container.fillText("Score 1: " + pts1, 200,50)
   container.fillText("Score 2: " + pts2, 750,50)
@@ -59,6 +71,10 @@ function Main(){
 
 
  setInterval(Main,20)
+     
+ 
+
+
      
      
  
