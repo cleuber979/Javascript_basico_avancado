@@ -3,11 +3,12 @@ let container = canvas.getContext("2d");
 
  container.fillStyle='#8b8b8b'
  let jogador1 = {
-     px: 100,
+     px:100,
      py:160,
      tx:30,
      ty:100,
      dir:0
+	 
       }
 
 
@@ -15,15 +16,18 @@ let container = canvas.getContext("2d");
      px:900,
      py:160,
      tx:30,
-     ty:100
+     ty:100,
+	 dir:0
  }
 
  let ball={
-     px:960/2-15,
-     py:420/2-15,
+     px:450,
+     py:120,
      tx:30,
      ty:30,
-     dir:10
+     dir:10,
+	 diry:2
+	
  }
 
 container.font="20px Arial"
@@ -63,15 +67,39 @@ if(jogador1.py<0){
 
  function Move_Ball(){
     ball.px += ball.dir
+    ball.py += ball.diry
+	
+	if(ball.py<30){
+		ball.diry *= -1
+	}
+    else if(ball.py>390){
+		ball.diry *= -1
+	}
+ }
 
-	 if (ball.px > 890){
-	 ball.dir*=-1
- }else if(ball.px <110){
+function points(){
+	   if (ball.px < -100){
+	   ball.px = 550
+	   ball.py = 200
+	   ball.dir*=-1
+	   pts2+=10
+   } 
+   else if(ball.px>1300){
+	    ball.px = 550
+	    ball.py = 200
+	    ball.dir*=-1
+	    pts1+=10
+   }
+}
+
+
+function colision_ball(){
+		 if (ball.py + ball.ty >= jogador2.py && ball.py <= jogador2.py + jogador2.ty && ball.px >= jogador2.px - jogador2.tx){
+	 ball.dir*= -1
+ }else if(ball.py + ball.ty >= jogador1.py && ball.py<= jogador1.py + jogador1.ty && ball.px <= jogador1.px + jogador1.tx){
 	 ball.dir *= -1
  }
- }
-
-
+}
 
  function Draw(){
   container.fillRect(jogador1.px,jogador1.py,jogador1.tx,jogador1.ty)
@@ -87,6 +115,8 @@ function Main(){
     console.log("estou vendo");
     Move_Ball()
     Move_player1()
+	colision_ball()
+	points()
 }
 
 
