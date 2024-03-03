@@ -23,7 +23,7 @@ let container = canvas.getContext("2d");
      py:420/2-15,
      tx:30,
      ty:30,
-	 dir:10
+     dir:10
  }
 
 container.font="20px Arial"
