@@ -17,7 +17,7 @@ let container = canvas.getContext("2d");
      py:160,
      tx:30,
      ty:100,
-	 dir:0
+     dir:0
  }
 
  let ball={
@@ -26,7 +26,7 @@ let container = canvas.getContext("2d");
      tx:30,
      ty:30,
      dir:10,
-	 diry:2
+     diry:2
 	
  }
 
