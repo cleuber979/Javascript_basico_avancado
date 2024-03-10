@@ -3,7 +3,7 @@ let container = canvas.getContext("2d");
 
  container.fillStyle='#8b8b8b'
  let jogador1 = {
-     px:0,
+     px:10,
      py:160,
      tx:30,
      ty:100,
@@ -13,7 +13,7 @@ let container = canvas.getContext("2d");
 
 
  let jogador2 ={
-     px:990,
+     px:960,
      py:160,
      tx:30,
      ty:100,
@@ -29,6 +29,8 @@ let container = canvas.getContext("2d");
      diry:2
 
  }
+ 
+ let jogando = true;
 
 container.font="20px Arial"
  let pts1 = 0;
@@ -73,7 +75,12 @@ jogador2.py +=jogador2.dir;
 
 
  }
-
+ 
+ function gameOver(){
+	 if (pts1 >90 || pts2>90){
+		 jogando = false;
+	 }
+ }
 
 
 
@@ -120,15 +127,29 @@ function colision_ball(){
   container.fillText("Score 1: " + pts1, 200,50)
   container.fillText("Score 2: " + pts2, 750,50)
  }
+ 
+ 
+ function DrawWin(){
+	 container.clearRect(0,0,1020,420)
+	 container.font="50px Arial"
+	 container.fillText("Score 1: " + pts1 +"Points",100,100)
+     container.fillText("Score 2: " + pts2 + "Points ", 600,100) 
+ }
 
 function Main(){
-    container.clearRect(0,0,1020,420)
+if(jogando===true){
+	    container.clearRect(0,0,1020,420)
     Draw()
     console.log("estou vendo");
     Move_Ball()
     Move_player1()
 	colision_ball()
 	points()
+	gameOver()
+}
+else{
+	DrawWin()
+}
 }
 
 
