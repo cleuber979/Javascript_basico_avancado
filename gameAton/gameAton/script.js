@@ -1,6 +1,7 @@
 let canvas = document.getElementById('canvas');
 let container = canvas.getContext("2d");
 
+
  container.fillStyle='#8b8b8b'
  let jogador1 = {
      px:10,
@@ -113,9 +114,9 @@ function points(){
 
 
 function colision_ball(){
-		 if (ball.py + ball.ty >= jogador2.py && ball.py <= jogador2.py + jogador2.ty && ball.px >= jogador2.px - jogador2.tx){
+		 if (ball.py + ball.ty >= jogador2.py && ball.py <= jogador2.py + jogador2.ty && ball.px >= jogador2.px - jogador2.tx && ball.px>= jogador2.px - jogador2.tx){
 	 ball.dir*= -1
- }else if(ball.py + ball.ty >= jogador1.py && ball.py<= jogador1.py + jogador1.ty && ball.px <= jogador1.px + jogador1.tx){
+ }else if(ball.py + ball.ty >= jogador1.py && ball.py<= jogador1.py + jogador1.ty && ball.px <= jogador1.px + jogador1.tx && ball.px>= jogador1.px - jogador1.tx){
 	 ball.dir *= -1
  }
 }
