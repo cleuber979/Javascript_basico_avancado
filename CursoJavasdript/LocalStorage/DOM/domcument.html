@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>jogoNave</title>
+   
+
+  </head>
+  <body>
+    
+	
+
+	
+	
+     <h2 id ="texto">Exercio do Document objetivo mudar o texto</h2> 
+	 <form>
+	 
+	 <h2>Nome </h2>
+	 <input type= "text" id= "IdInput" value=""></input>
+	 <button onclick = "envio()">Enviar</button>
+	 
+
+     <script>
+	
+	
+	
+      var NomeEnviado = document.getElementById("IdInput").value
+      console.log(NomeEnviado);	  
+	       function envio(){
+		   var valor = document.getElementById("IdInput").value;
+        alert(valor)
+    }
+	 document.getElementById("texto").innerHTML= "Este e o novo texto criado no HTML"
+	 
+	 function mudar_Cor(){
+	  
+	  let mudarCor = document.getElementById("texto").style.color="red";
+	  
+	 }
+	 
+	 mudar_Cor()
+	 
+	 
+	 </script>
+
+  </body>
+</html>
