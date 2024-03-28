@@ -1,0 +1,61 @@
+
+
+.main{
+    width:982px;
+    height:598px;
+    background-color: #D9D9D9;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.inputUser{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 50px;
+}
+
+.nameform{
+    position: absolute; 
+    margin-left: 38px;
+    height: 25px;
+}
+
+.sobrenomeForm{
+    position: absolute; 
+    margin-left: 5px;
+    height: 25px;
+}
+
+.pesoForm{
+    position: absolute; 
+    margin-left: 48px;
+    height: 25px;
+}
+
+.alturaForm{
+    position: absolute; 
+    margin-left: 38px; 
+    height: 25px;
+}
+
+.buttonEnviar{
+    width: 140px;
+    height: 56px;
+    position: absolute;
+    background-color:#F20D0D;
+    margin-left: 140px;
+    margin-top: 76px;
+}
+
+.imgImc{
+position: absolute;
+margin-left: 453px;
+margin-top: -300px;
+}
+.resultadoForm{
+    position: absolute;
+    margin-left: 453px;
+    margin-top: 170px;
+    width: 316px;
+    height: 50px; 
+}
