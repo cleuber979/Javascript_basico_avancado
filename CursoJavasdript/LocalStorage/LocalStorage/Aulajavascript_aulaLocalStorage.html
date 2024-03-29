@@ -34,17 +34,35 @@
 	//console.log(localStorage['nome']);
 
     document.getElementById("enviar-nome").onclick = function(){
+
+     // guardar o nome digitado em localStorage	    
      var nome = document.getElementById("nome-usuario").value;
      localStorage.setItem("nome",nome);
 
+     //esconder o formulario	    
      document.getElementById("formulario").style.display = 'none';
 
+     //Atualizar e mostrar mensagem de boas vindas	    
      document.getElementById("welcome-text").innerHTML="Olá " + localStorage.nome + " ,tudo bem ?";
      document.getElementById("not-me").innerHTML="Não é você " + localStorage.nome + " ?";
      document.getElementById("welcome-area").style.display = 'initial';
 
    };
+
+if(localStorage.nome){
+
+	     //esconder o formulario	    
+     document.getElementById("formulario").style.display = 'none';
+
+     //Atualizar e mostrar mensagem de boas vindas	    
+     document.getElementById("welcome-text").innerHTML="Olá " + localStorage.nome + " ,tudo bem ?";
+     document.getElementById("not-me").innerHTML="Não é você " + localStorage.nome + " ?";
+     document.getElementById("welcome-area").style.display = 'initial';
+};    
+
+document.getElementById("not-me").onclick = function(){
 	
+}     
  
 	 
 	 
