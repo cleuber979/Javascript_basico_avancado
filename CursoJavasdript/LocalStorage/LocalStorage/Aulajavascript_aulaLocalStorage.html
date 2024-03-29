@@ -10,17 +10,40 @@
     
 	
      <h2>Aula Local storage</h2>
-	
-	
-     
+	     
+	   
+        <div id='formulario'>
+          <input id="nome-usuario" type="text" placeholder="Digite o nome do usuario...">
+          <button id="enviar-nome">Enviar</button>
+          
+        </div>
+        
+        <p id="welcome-area" style = "font-weight: bold; font-size: 18px;color: green; display: none;">
+          <span id="welcome-text">Olá Cleuber,tudo bem?</span>
+          <br>
+          <span id ='not-me'>Não é Cleuber?</span>
+        </p>
+
 	 
 
      <script>
 	
    // window.localStorage.setItem("nome","cleuber")//
-	console.log(localStorage['nome']);
-	localStorage.removeItem("nome");
-	console.log(localStorage['nome']);
+	//console.log(localStorage['nome']);
+	//localStorage.removeItem("nome");
+	//console.log(localStorage['nome']);
+
+    document.getElementById("enviar-nome").onclick = function(){
+     var nome = document.getElementById("nome-usuario").value;
+     localStorage.setItem("nome",nome);
+
+     document.getElementById("formulario").style.display = 'none';
+
+     document.getElementById("welcome-text").innerHTML="Olá " + localStorage.nome + " ,tudo bem ?";
+     document.getElementById("not-me").innerHTML="Não é você " + localStorage.nome + " ?";
+     document.getElementById("welcome-area").style.display = 'initial';
+
+   };
 	
  
 	 
