@@ -1,0 +1,17 @@
+// Aula JQuery - Loop each
+
+var lista =["html","CSS","javascript","JQuery","PHP"];
+
+//for(let a=0;a<lista.length;a++){
+    //console.log(lista[a]);
+//}
+
+$.each(lista,function(indice,valor){
+    console.log("O elemento de indice [" + indice + ']tem o valor de: ' + valor);
+});
+
+var pessoa ={
+    'nome':'Cleuber Maciel Barbosa',
+    'data birth':'09/01/1979',
+    'CPF':'05363976781'
+}
