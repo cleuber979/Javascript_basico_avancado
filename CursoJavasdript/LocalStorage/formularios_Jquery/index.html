@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="./query-3.7.1.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>O metodo <strong>Val</strong>  e utilizado para pegar e para definir valores de campos de formulário.</p>
+     <br>
+     <p>
+       var conteudo_input = $("#campo_nome").val();
+       console.log(conteudo_input);
+    </p>
+     <p style="margin-button: 5px">Nome:</p>
+     <input id="campo_nome" type="text" value="Cleuber Maciel" style="margin: 0;">
+     <br><br> 
+     
+     <p>Trabalhando com outros tipos de campos de formulário</p>
+     <h4>Select box</h4>
+     <form>
+        <select id="options">
+          <option value="opt1">Praia</option>
+          <option value="opt2">Montanha</option>
+          <option value="opt3">Cidade</option>
+        </select>
+     </form>
+
+     <p>Agora podemos atualizar o valor selecionado sempre que a opção for alterada usando o metodo change</p>
+     <h4>Select box</h4>
+     <form>
+        <select id="options_01">
+          <option value="opt1">carro</option>
+          <option value="opt2">Moto</option>
+          <option value="opt3">Barco</option>
+          <option value="opt3">Trem</option>
+          <option value="opt3">Avião</option>
+        </select>
+     </form>
+      <h4>Radio Buttons</h4>
+      <form>
+        <span><input type="radio" name="genero" value="M" checked>Masculino</span><br>
+        <span><input type="radio" name="genero" value="F">Feminino</span><br>
+        <span><input type="radio" name="genero"value="Nome">Prefiro não dizer</span>
+      </form>
+       <h4>CheckBoxes</h4>
+       <form>
+        <span><input type="checkbox" name="interesse" value="DFE" checked>Desenvolvimento Front End</span><br>
+        <span><input type="checkbox" name="interesse" value="DBE">Desenvolvimento Back End</span><br>
+        <span><input type="checkbox" name="interesse" value="Desing">Desing</span>
+       </form>
+
+
+     <script src="./script.js"></script> 
+</body>
+</html>
